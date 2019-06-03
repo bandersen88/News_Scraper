@@ -1,0 +1,31 @@
+{
+  "name": "news_scraper",
+  "version": "1.0.0",
+  "description": "web news scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingofthebanders/News_Scraper.git"
+  },
+  "keywords": [
+    "scarper",
+    "mongo",
+    "news"
+  ],
+  "author": "Ben Andersen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingofthebanders/News_Scraper/issues"
+  },
+  "homepage": "https://github.com/kingofthebanders/News_Scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.5.12"
+  }
+}
