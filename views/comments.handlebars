@@ -1,0 +1,45 @@
+<div class="comments-page-container">
+	<div class="articles-container articles-container-cp">
+		<div class="article article-cp" data-id="{{article._id}}">
+			<img class="article-image article-image-cp" src="{{article.image}}" alt="Article Image">
+			<div class="article-text article-text-cp">
+				<a class="article-title article-title-cp" href="{{article.link}}">{{article.title}}</a>
+				<p class="article-byline article-byline-cp">By {{article.author}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="form-and-comments">
+		<div class="comments-container">
+			<h3 class="comments-title">User Comments</h3>
+			{{#if article.comments}}
+				{{#each article.comments}}
+					<div class="comment">
+						<button class="comment-delete" data-id="{{this._id}}">X</button>
+						<h4 class="comment-author">{{this.author}}</h6>
+						<div class="comment-container">
+							<p class="comment-body">{{this.body}}</p>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				<p class="no-comments">There are no comments on this article.</p>
+			{{/if}}
+		</div>
+		<div class="form-container">
+			<h3 class="form-title">Add a Comment</h5>
+			<form class="comment-form">
+				<div class="formrow">
+					<label for="form-author">Name:</label>
+					<input class="form-author"type="text" name="form-author" id="form-author">
+				</div>
+				<div class="formrow">
+					<label for="form-body">Comments:</label>
+					<textarea class="form-body" name="form-body" id="form-body" cols="30" rows="10"></textarea>
+				</div>
+				<div class="formrow">
+					<input class="post-comment" type="submit" id="form-submit" value="Post Comment">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

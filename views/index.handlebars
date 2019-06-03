@@ -1,0 +1,19 @@
+{{!-- TODO: Add Bootstrap Jumbotron and move scrape button there --}}
+<div class="articles-container">
+	{{#each articles}}
+		<div class="article" data-id="{{this._id}}">
+			<div class="image-div">
+			{{!-- <a href="{{this.link}}"> --}}
+				<div class="comments-button-area">
+					<a href="/{{this.id}}/comments" data-id="{{this._id}}"><span class="far fa-comments comments-button"></span></a>
+				</div>
+				<img class="article-image" src="{{this.image}}" alt="Article Image" onError="this.onerror=null;this.src='/assets/images/placeholder.png';">
+			{{!-- </a> --}}
+			</div>
+			<div class="article-text">
+				<a class="article-title" href="{{this.link}}">{{this.title}}</a>
+				<p class="article-byline">By {{this.author}}</p>
+			</div>
+		</div>
+	{{/each}}
+</div>
