@@ -1,2 +1,2 @@
-# News_Scraper
-Scrapes News from outside websites
+# News-Scraper
+Rutgers Coding Bootcamp Week 18 Homework
